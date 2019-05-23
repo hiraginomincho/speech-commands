@@ -7,7 +7,7 @@ let recognizer = speechCommands.create("BROWSER_FFT");
 const recognizerDemo = async () => {
   await recognizer.ensureModelLoaded();
   console.log("Speech Commands: ready");
-  // SpeechCommands.ready();
+  SpeechCommands.ready();
 }
 
 function startListening() {
@@ -18,7 +18,7 @@ function startListening() {
     }
     output.sort((a, b) => b[1] - a[1]);
     console.log("Speech Commands: " + JSON.stringify(output));
-    // SpeechCommands.reportResult(JSON.stringify(output));
+    SpeechCommands.reportResult(JSON.stringify(output));
   }, {overlapFactor: 0, probabilityThreshold: 0.75});
 }
 
